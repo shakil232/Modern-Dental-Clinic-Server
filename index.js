@@ -210,10 +210,7 @@ const run = async () => {
 run().catch(console.dir);
 
 
-// Default-Api 
-app.get('/default', (req, res ) => {
-    res.send('welcome modern-dental-clinic')
-})
+
 
 // LISTEN-PORT 
 app.listen(port, () => {
