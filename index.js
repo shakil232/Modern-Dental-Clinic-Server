@@ -9,10 +9,14 @@ const port = process.env.PORT || 5001;
 
 
 // firebase-admin-initialize 
-const serviceAccount = require("./modern-dental-clinic-mdc23-firebase-adminsdk-c8pzj-b6826af1f5.json");
 admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
-});
+    credential: admin.credential.cert({
+        projectId: process.env.FIREBASE_PROJECT_ID, 
+        clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+        privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n') 
+    }),
+    databaseURL: process.env.FIREBASE_DATABASE_URL
+  });
 
 
 // middleware
