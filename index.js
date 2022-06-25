@@ -1,10 +1,10 @@
 const express = require('express');
-const app = express();
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const ObjectId = require('mongodb').ObjectId;
 const admin = require("firebase-admin");
-const cors = require('cors');
 require('dotenv').config();
+const cors = require('cors');
+const app = express();
 const port = process.env.PORT || 5001;
 
 
@@ -209,7 +209,10 @@ const run = async () => {
 // run-function-calling 
 run().catch(console.dir);
 
-
+// default-api 
+app.get('/', (req, res) => {
+    res.send('Welcome Modern Dental Clinic')
+})
 
 
 // LISTEN-PORT 

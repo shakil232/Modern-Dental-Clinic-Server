@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "start-dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +16,12 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "firebase-admin": "^10.2.0",
-    "mongodb": "^4.7.0",
-    "nodemon": "^2.0.18"
+    "mongodb": "^4.7.0"
+  },
+  "engines": {
+    "node": "13.14.0"
+},
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
