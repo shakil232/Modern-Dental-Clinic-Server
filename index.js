@@ -209,7 +209,10 @@ const run = async () => {
 // run-function-calling 
 run().catch(console.dir);
 
-
+// default-api 
+app.get('/', (req, res) => {
+    res.send('Welcome Modern Dental Clinic')
+})
 
 
 // LISTEN-PORT 
